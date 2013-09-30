@@ -1,0 +1,194 @@
+{
+	content: "";
+	display: block;
+	clear:both;
+}
+ul, li {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: "Segoe UI Light", "Lucida Grande", Sans-Serif;
+	font-size: 16px;
+	background: url(images/grey_wash_wall.png);
+	color: #181818 ;
+}
+h1{
+	font-style: bold;
+	font-size: 36px;
+	color: #87c41c;
+	position:relative;
+	left: 34%;
+}
+
+h2 {
+	color: #606060;
+}
+
+nav {
+	width: 50%;
+	background-color: #87c41c; 
+	position:relative;
+	left: 20%;
+	padding: 10px 0 10px 90px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+nav li{
+	list-style: none;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+nav li a {
+	text-decoration: none;
+	padding: 5px 10px;
+	border: 1px solid #909090;
+	color: #181818;
+	background: url(images/satinweave.png);
+	border-radius: 5px;
+}
+
+p {	
+	color: #87c41c;
+	font-size: 16px;
+	position:relative;
+	left: 38%; 
+}
+
+.main {
+	background: url(images/satinweave.png);
+	width: 50%;
+	margin: 0 20%;
+	padding: 30px 40px 30px 50px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+label {
+ 	display: inline-block;
+ 	width: 80px;
+ }
+
+form li {
+  	list-style: none;
+  	margin-bottom: 1em;
+  }
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+	 -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}
+
+tr:hover {
+	background-color: #E0E0E0;
+}
+
+td {
+	border-bottom: 1px solid #D0D0D0;
+ 	max-width: 155px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+td a {
+	text-decoration: none;
+	color:#606060;
+}
+
+thead {
+	border-bottom: 2px solid #888888;
+	background-color: #606060;
+	color: white;
+}
+
+td, th {
+	padding: 5px 15px;
+}
+
+button a {
+	text-decoration: none;
+	color: white;
+}
+
+input[type="submit"], input[type = "text"], input[type = "password"], button{
+ 	width: 155px;
+ 	font-family: "Segoe UI Light", "Lucida Grande", Sans-Serif;
+	font-size: 16px;
+	color: #181818 ;
+	border-radius: 5px;
+	padding-left: 5px;
+ }
+
+input[type="submit"], button {
+ -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+input[type="submit"], button {
+ 	background-color: #87c41c;
+ 	color: white;
+ 	padding: 5px 0;
+ }
+
+menu {
+	width: 100%;
+	position:relative;
+	padding: 10px 0 10px 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	margin-left: 50%;
+}
+
+menu li{
+	list-style: none;
+	display: inline;
+	margin-left: 150px;
+}
+
+#upload input[type = "file"]{
+	width: 300px;
+	font-family: "Segoe UI Light", "Lucida Grande", Sans-Serif;
+	font-size: 16px;
+	color: #181818 ;
+	border-radius: 5px;
+	padding-left: 5px;
+}
+
+.ok, .error{
+ 	width: 25%;
+	margin: 0 20%;
+	padding: 20px 40px;
+	border-radius: 5px;
+	color: #606060;
+	margin-bottom: 10px;
+	background-repeat: no-repeat; 
+ 	background-position: 10px center;
+ 	background-color: #f2f2f2;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+ }
+
+.error { 
+ 	background-image: url(images/error.png); 	
+ }
+
+.ok {
+ 	background-image: url(images/ok.png);
+ }
+
+footer {
+    position: absolute;
+    left: 30%;
+    bottom: 0;
+}

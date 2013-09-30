@@ -1,0 +1,21 @@
+$ git clone https://github.com/arabella/cadmium.git
+
+Initialized empty Git repository in ...
+remote: ...
+.
+.
+.
+$ ls
+?
+
+$ cd cadmium
+$ echo Enters Vlad0 > vlad0.file
+$ git add .
+$ git commit -m "vlad0 initial commit"
+
+[master 22344442?]
+.
+.
+$ git push
+
+Counting objects: 

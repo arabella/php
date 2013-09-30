@@ -1,0 +1,10 @@
+        /*
+        public static ScoreEntry GetPlayerdata()
+        {
+            string data = string.Empty;
+           
+            //TODO get name and turns count
+
+            ScoreEntry entry = new ScoreEntry(data);
+            return entry;
+        }*/
