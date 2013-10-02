@@ -1,5 +1,4 @@
 <?php
-ob_start();
 session_start();
 	$pageTitle = 'User Login';
 	require 'inc/header.php';

@@ -1,5 +1,4 @@
 <?php
-ob_start();
 session_start();
 $pageTitle = "Admin Page";
 include 'inc/header.php';
@@ -59,15 +58,9 @@ if (count($files) > 2) {
 
 <form method = "post" action = "">
 	<menu><ul>
-		<!-- li>
-			<input type = "submit" name = "browseFiles" value = "Browse Your Files"/>
-		</li> -->
 		<li>
-			<input type = "submit" name = "uploadFiles" value = "Upload New Files"/>
+			<input type = "submit" name = "uploadFiles" value = "Upload New File"/>
 		</li>
-		<!-- <li>
-			<input type = "submit" name = "logout" value = "Logout"/>
-		</li> -->
 	</ul></menu>
 	
 </form>

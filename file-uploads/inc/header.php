@@ -7,8 +7,11 @@
   <nav>
 		<ul>
 			<li><a href="index.php">Home</a></li>
-			<!-- <li><a href="upload.php">Upload</a></li>-->
-			<li><a href = "logout.php">Logout</a> 
+			<?php
+			if (isset($_SESSION['username'])) {
+			echo '<li><a href = "logout.php">Logout</a> ';
+		}
+		?>
 		</ul>
 	</nav>
 </head>

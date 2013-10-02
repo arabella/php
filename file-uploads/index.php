@@ -1,5 +1,4 @@
 <?php 
-
 session_start();
 
 	$pageTitle = 'User Login';
@@ -29,7 +28,7 @@ session_start();
 </li><li>or</li>
 	</ul>
 </form>
- <a href="/user-files-upload/register.php"><button type = "button">Register</button></a>
+ <a href="http://devevolution.com/php/user-files-upload/register.php"><button type = "button">Register</button></a>
 </div>
 <?php
 include 'inc/footer.php';

@@ -3,9 +3,11 @@
 	display: block;
 	clear:both;
 }
+header, footer,
+h1, h2, div, p,
 ul, li {
-	padding: 0;
-	margin: 0;
+    margin: 0;
+    padding: 0;
 }
 body {
 	font-family: "Segoe UI Light", "Lucida Grande", Sans-Serif;
@@ -14,10 +16,12 @@ body {
 	color: #181818 ;
 }
 h1{
+	font-style: bold;
 	font-size: 36px;
 	color: #87c41c;
 	position:relative;
 	left: 34%;
+	margin-botttom:20px;
 }
 
 h2 {
@@ -53,13 +57,13 @@ p {
 	color: #87c41c;
 	font-size: 16px;
 	position:relative;
-	left: 38%; 
+	text-align: center; 
 }
 
 .main {
 	background: url(images/satinweave.png);
 	width: 50%;
-	margin: 0 20%;
+	margin: 5% 20%;
 	padding: 30px 40px 30px 50px;
 	border-radius: 5px;
 	-webkit-box-shadow: 0 8px 6px -6px black;
@@ -187,7 +191,8 @@ menu li{
  }
 
 footer {
-    position: absolute;
-    left: 30%;
-    bottom: 0;
+	width: 48%;
+	margin-top: 150px;
+	position: absolute;
+	bottom: -50px;
 }

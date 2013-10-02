@@ -1,5 +1,5 @@
 <footer>
-	<p>php Course by Gatakka @TelerikAcademy</p>
+	<!--<p>php Course by Gatakka @TelerikAcademy</p>-->
 </footer>
 </body>
 </html>

@@ -23,7 +23,7 @@ function checkExistingUser($username){
 		
 		foreach ($data as $user) {
 			$userCreds = explode('|', $user);
-			if ($userCreds[0] === $username) {
+			if (strtolower($userCreds[0]) === strtolower($username)) {
 				return true;
 			}
 		}
