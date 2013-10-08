@@ -1,0 +1,170 @@
+{
+	content: "";
+	display: block;
+	clear:both;
+}
+
+header, footer,
+h1, h2, div, p,
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {height: 100%;}
+
+#wrap {min-height: 100%;}
+
+#main {
+	overflow:auto;
+	padding-bottom: 80px;
+}
+
+#content {
+	background: url(img/satinweave.png);
+	margin: 20px 20%;
+	padding: 30px 40px 30px 50px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+footer {
+	margin: 0 39%;
+	position: relative;
+	margin-top: -40px;  /*negative value of footer height */
+	height: 40px;
+	clear:both;
+	} 
+
+footer p {
+	font-size: 16px;
+	color: #87c41c;
+}
+
+body {
+	font-family: "Segoe UI", "Lucida Grande", Sans-Serif;
+	font-size: 16px;
+	background: url(img/grey_wash_wall.png);
+	color: #606060;
+}
+
+.center {
+	width: 800px;
+	margin: 0 auto;
+}
+
+
+h1{
+	font-size: 36px;
+	color: #87c41c;
+	text-align: center;
+}
+
+h2 {
+	color: #606060;
+}
+
+a {
+	color: #606060;
+}
+
+nav {
+	background-color: #87c41c; 
+	padding: 15px 0 15px 86%;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+nav li, menu li{
+	list-style: none;
+	display: inline-block;
+
+}
+
+nav li a {
+	text-decoration: none;
+	padding: 5px 10px;
+	border: 1px solid #909090;
+	color: #606060;
+	background: url(img/satinweave.png);
+	border-radius: 5px;
+}
+
+.info {	
+	color: #606060;
+	font-size: 12px;
+	font-style: italic;
+	margin: 5px;
+}
+
+.title {
+	margin: 5px;
+	font-weight: bold;
+	background: #E0E0E0;
+}
+
+label {
+ 	display: inline-block;
+ 	width: 130px;
+ }
+
+
+form li {
+  	list-style: none;
+  	margin-bottom: 1em;
+  }
+
+
+input[type="submit"], input[type = "text"], input[type = "password"], button, select {
+ 	padding-left: 5px;
+ 	font-family: "Segoe UI Light", "Lucida Grande", Sans-Serif;
+	font-size: 16px;
+	color: #181818 ;
+	border-radius: 5px;
+ }
+
+input[type="submit"], button{
+	color: white;
+	background-color: #87c41c;
+	padding: 5px 10px;
+ 	 -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+ }
+
+menu {
+	padding: 10px 0 0 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	background-color: #87c41c;
+	color: #606060; 
+}
+
+menu input[type = "submit"], menu button, select {
+	background: url(img/satinweave.png);
+	color: #606060;
+}
+
+.ok, .error{
+	margin: 5% 5%;
+	padding: 20px 40px;
+	border-radius: 5px;
+	color: #606060;
+	margin-bottom: 20px;
+	background-repeat: no-repeat; 
+ 	background-position: 10px center;
+ 	background-color: white;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+ }
+
+.error { 
+ 	background-image: url(img/error.png); 	
+ }
+
+.ok {
+ 	background-image: url(img/ok.png);
+ }
