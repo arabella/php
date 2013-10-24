@@ -5,8 +5,7 @@ require 'functions.php';
 $pageTitle = 'Add Author';
 include 'inc/header.php';
 mb_internal_encoding('UTF-8');
-echo $config['DB_USER'];
-echo $config['DB_PASSWORD'];
+
 if (isset($_POST['add-author'])) {
 	$authorName = htmlspecialchars(trim(strtolower($_POST['author-name'])));
 
