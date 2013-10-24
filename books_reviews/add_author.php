@@ -12,7 +12,7 @@ if (isset($_POST['add-author'])) {
 	if (mb_strlen($authorName) < 3 || mb_strlen($authorName) > 150) {
 		$_SESSION['messages'] = $messages['AN_Length'];
 	}
-
+else {
 	$author = isExistingAuthor($authorName);
 	// var_dump($author);
 
@@ -44,6 +44,7 @@ if (isset($_POST['add-author'])) {
 	 		header("location:add_author.php");
 	 		exit();
 	 	}
+}
 }
 
 ?>
