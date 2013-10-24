@@ -5,8 +5,6 @@ require 'functions.php';
 $pageTitle = 'Search Results';
 require 'inc/header.php';
 
-
-
 if (isset($_POST['search'])) {
 	$searching  = $_POST['searching'];
 	$find = $_POST['find'];
@@ -22,10 +20,9 @@ if (isset($_POST['search'])) {
 	 exit; 
  	 } 
 
- $connection =  mysqli_connect('localhost', 'root', 'qwerty', 'books_reviews') 
+ $connection =  mysqli_connect('localhost', 'root', '', 'books_reviews') 
 				or die('Cannot connect to database.');
  mysqli_set_charset($connection, 'utf8');
-
 
  $find = strtoupper($find); 
   

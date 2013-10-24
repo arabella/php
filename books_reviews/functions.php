@@ -4,7 +4,7 @@ function isLogged() {
     return isset($_SESSION['username']);
 }
 
-function isExistingUser($username)
+function isExistingUser($username,$config)
 {
 	try {
 	 	$connection = new PDO('mysql:host=localhost;dbname=books_reviews;charset=utf8', 
@@ -30,7 +30,7 @@ function isExistingUser($username)
 
 }
 
-function isExistingAuthor($authorName)
+function isExistingAuthor($authorName,$config)
 {
 	try {
 	 	$connection = new PDO('mysql:host=localhost;dbname=books_reviews;charset=utf8', 
@@ -58,7 +58,7 @@ function isExistingAuthor($authorName)
 
 } 
 
-function getAuthors() 
+function getAuthors($config) 
 {
 	try {
 		$connection = new PDO('mysql:host=localhost;dbname=books_reviews;charset=utf8', 
@@ -79,7 +79,7 @@ function getAuthors()
 }
 
 
-function isAuthorIdValid($id) {
+function isAuthorIdValid($id, $config) {
 	try {
 		$connection = new PDO('mysql:host=localhost;dbname=books_reviews;charset=utf8', 
 	 	$config['DB_USER'], $config['DB_PASSWORD']);
@@ -105,7 +105,7 @@ function isAuthorIdValid($id) {
 	}
 }
 
-function isBookIdValid($id) {
+function isBookIdValid($id, $config) {
 	try {
 		$connection = new PDO('mysql:host=localhost;dbname=books_reviews;charset=utf8', 
 	 	$config['DB_USER'], $config['DB_PASSWORD']);
@@ -131,7 +131,7 @@ function isBookIdValid($id) {
 	}
 }
 
-function getUserId($user) {
+function getUserId($user, $config) {
 	try {
 		$connection = new PDO('mysql:host=localhost;dbname=books_reviews;charset=utf8', 
 	 	$config['DB_USER'], $config['DB_PASSWORD']);
@@ -154,7 +154,7 @@ function getUserId($user) {
 
 }
 
-function getUName($uid) {
+function getUName($uid, $config) {
 	try {
 		$connection = new PDO('mysql:host=localhost;dbname=books_reviews;charset=utf8', 
 	 	$config['DB_USER'], $config['DB_PASSWORD']);
@@ -177,7 +177,7 @@ function getUName($uid) {
 
 }
 
-function isUserIdValid($id) {
+function isUserIdValid($id, $config) {
 	try {
 		$connection = new PDO('mysql:host=localhost;dbname=books_reviews;charset=utf8', 
 	 	$config['DB_USER'], $config['DB_PASSWORD']);
@@ -202,7 +202,7 @@ function isUserIdValid($id) {
 	}
 }
 
-function getBTitle($bid) {
+function getBTitle($bid, $config) {
 	try {
 		$connection = new PDO('mysql:host=localhost;dbname=books_reviews;charset=utf8', 
 	 	$config['DB_USER'], $config['DB_PASSWORD']);
@@ -224,7 +224,7 @@ function getBTitle($bid) {
 
 }
 
-function getComments($bid) {
+function getComments($bid, $config) {
 	try {
 		$connection = new PDO('mysql:host=localhost;dbname=books_reviews;charset=utf8', 
 						 	$config['DB_USER'], $config['DB_PASSWORD']);

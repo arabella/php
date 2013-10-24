@@ -4,7 +4,7 @@ require 'config.php';
 require 'functions.php';
 $pageTitle = 'Add Book';
 include 'inc/header.php';
-mb_internal_encoding('UTF-8');
+
 
 if (isset($_POST['add-book'])) {
 	$title = htmlspecialchars(trim($_POST['new-book']));
@@ -15,12 +15,11 @@ if (isset($_POST['add-book'])) {
 	$error = false;
 	if (empty($authors)) {
 		echo '<div class="error">No Author Selected</div>';
-		//$_SESSION['messages'] = $messages['NoAuthorSelected'];
 		$error = true;
 	} 
 	else {
 		foreach ($authors as $v) {
-		$valid = isAuthorIdValid($v);
+		$valid = isAuthorIdValid($v, $config);
 		if (!$valid) {
 			echo '<div class="error">No such author</div>';
 			$error = true;
@@ -36,7 +35,7 @@ if (isset($_POST['add-book'])) {
 	if (!$error) {
 		try {
 			$connection = new PDO('mysql:host=localhost;dbname=books_reviews;charset=utf8', 
-	 					$config['DB_USER'], $config['DB_PASSWORD']););
+	 					$config['DB_USER'], $config['DB_PASSWORD']);
 		 	$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		 	$stmt = $connection->prepare('insert into books(book_title) values(:title)');
@@ -77,7 +76,7 @@ if (isset($_POST['add-book'])) {
 			<select name = "authors-list[]" multiple >
 
 			<?php
-			$result = getAuthors(); 
+			$result = getAuthors($config); 
 			foreach ($result as $v) {
 				echo '<option value ='. $v['author_id'] .'>' . $v['author_name'] . '</option>';
 			}
@@ -91,5 +90,5 @@ if (isset($_POST['add-book'])) {
 </div>
 </div>
 <?php
-require 'inc/footer.php';
+include 'inc/footer.php';
 ?>

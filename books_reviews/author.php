@@ -8,7 +8,7 @@ include 'inc/header.php';
 if (isset($_GET['author_id'])) {
 	$id = (int)(trim($_GET['author_id']));
 
-	$valid = isAuthorIdValid($id);
+	$valid = isAuthorIdValid($id, $config);
 	//var_dump($valid);
 	if ($valid) {
 		try {
@@ -59,3 +59,5 @@ if (isset($_GET['author_id'])) {
 		exit;
 	}
 }
+
+include 'inc/header.php';

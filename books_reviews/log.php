@@ -6,8 +6,8 @@ $pageTitle = 'Login';
 include 'inc/header.php';
 
 if (isset($_POST['login'])) {
-	$username = $_POST['username'];
-	$password = $_POST['password'];
+	$username = trim($_POST['username']);
+	$password = trim($_POST['password']);
 
 try {
 	$connection = new PDO('mysql:host=localhost;dbname=books_reviews;charset=utf8', 
@@ -40,13 +40,6 @@ try {
 	echo 'ERROR: '.$e -> getMessage();
 }
 } 
-
-
-
-
-
-
-
 ?>
 
 

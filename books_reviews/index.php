@@ -1,19 +1,15 @@
 <?php
-
 session_start();
-
 require 'config.php';
 require 'functions.php';
 $pageTitle = 'Home';
 include 'inc/header.php';
 
-echo $config['DB_USER'];
-echo $config['DB_PASSWORD'];
 if (isset($_GET['sort']) && ($_GET['sort'] == 'asc')) {
 	$order = 'asc';
 } else $order = 'desc';
 
-$connection =  mysqli_connect('localhost', 'root', 'qwerty', 'books_reviews') 
+$connection =  mysqli_connect('localhost', 'root', '', 'books_reviews') 
 				or die('Cannot connect to database.');
 mysqli_set_charset($connection, 'utf8');
 
@@ -41,7 +37,7 @@ $result = [];
 			</thead><tbody>';
 
 	foreach ($result as $k => $v) {
-		$cmnts = getComments($k);
+		$cmnts = getComments($k, $config);
 		echo '<tr><td><a href="book.php?book_id=' . $k .'">' . $v['book_title'] .'</a></td><td>';
 
 		$ar = [];
@@ -52,7 +48,4 @@ $result = [];
 	}
 	echo '</tbody></table>';
 
-
-?>
-<?php
 include 'inc/footer.php';

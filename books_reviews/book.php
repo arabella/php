@@ -8,7 +8,7 @@ include 'inc/header.php';
 if (isset($_GET['book_id'])) {
 	$id = (int)(trim($_GET['book_id']));
 
-	$valid = isBookIdValid($id);
+	$valid = isBookIdValid($id, $config);
 	//var_dump($valid);
 	if ($valid) {
 		try {
@@ -35,7 +35,7 @@ if (isset($_GET['book_id'])) {
 	 		$result[$row['book_id']]['authors'][$row['author_id']] = $row['author_name'];
 	 		}
 
-	 		$cmnts = getComments($id);
+	 		$cmnts = getComments($id, $config);
 	 		
 			foreach ($result as $k => $v) {
 				echo '<div class = "bookinfo"><h3>Reviews for ';
@@ -51,7 +51,7 @@ if (isset($_GET['book_id'])) {
 			if (count($cmnts) != 0) {
 				foreach ($cmnts as $c) {
 					$uid = $c['user_id'];
-					$user = getUName($uid);
+					$user = getUName($uid, $config);
 					echo '<p>' . $c['c_text'] . '</p>';
 					echo '<p class = "info">published on ' .$c['c_date'] .' by 
 					<a href="user_info.php?uid=' . $uid . '"> ' .$user .'</a></p>';					
@@ -79,11 +79,11 @@ if (isset($_GET['book_id'])) {
 						$bookId = $id;
 
 						$user = $_SESSION['username'];
-						$userId = getUserId($user);
+						$userId = getUserId($user, $config);
 
 						try {
 							$connection = new PDO('mysql:host=localhost;dbname=books_reviews;charset=utf8', 
-						 	$config['DB_USER'], $config['DB_PASSWORD']););
+						 	$config['DB_USER'], $config['DB_PASSWORD']);
 						 	$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 						 	$stmt = $connection->prepare('insert into comments(c_date, c_text, user_id, book_id)

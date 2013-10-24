@@ -1,9 +1,7 @@
 <?php
 session_start();
-
 require 'config.php';
 require 'functions.php';
-mb_internal_encoding('UTF-8');
 $pageTitle = 'Register';
 include 'inc/header.php';
 
@@ -53,7 +51,7 @@ if (isset($_POST['registration'])) {
     } 
 
 	 if (!$error) {
-	 	$user = isExistingUser($newUsername);
+	 	$user = isExistingUser($newUsername, $config);
 
 	 	if (!$user) {
 	 		try {
@@ -86,5 +84,4 @@ if (isset($_POST['registration'])) {
 	 	}
 	 }
 }
-
 ?>

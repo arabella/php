@@ -8,9 +8,9 @@ include 'inc/header.php';
 if (isset($_GET['uid'])) {
 	$id = (int)(trim($_GET['uid']));
 
-	$valid = isUserIdValid($id);
+	$valid = isUserIdValid($id, $config);
 	if ($valid) {
-		$username = getUName($id);
+		$username = getUName($id, $config);
 		echo "<h2>Comments posted by $username </h2>";
 
 		try {
@@ -27,7 +27,7 @@ if (isset($_GET['uid'])) {
 
 	 		if (count($cmnts) != 0) {
 				foreach ($cmnts as $c) {
-					$bTitle = getBTitle($c['book_id']);
+					$bTitle = getBTitle($c['book_id'],$config);
 					echo '<p>' .$c['c_text'] . '</p>';
 					echo '<p class = "info">on <a href="book.php?book_id=' . $c['book_id'] . '">' . $bTitle .'</a> | ';
 					echo 'published on ' . $c['c_date'] . '</p>';
@@ -43,7 +43,6 @@ if (isset($_GET['uid'])) {
 		catch (PDOException $e) {
 			echo 'ERROR: ' . $e->getMessage();
 			}
-
 	}
 	else 
 	{
@@ -52,3 +51,4 @@ if (isset($_GET['uid'])) {
 		exit;
 	}
 }
+include 'inc/footer.php';
