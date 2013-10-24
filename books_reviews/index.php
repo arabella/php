@@ -7,8 +7,7 @@ require 'functions.php';
 $pageTitle = 'Home';
 include 'inc/header.php';
 
-echo $config['DB_USER'];
-echo $config['DB_PASSWORD'];
+
 if (isset($_GET['sort']) && ($_GET['sort'] == 'asc')) {
 	$order = 'asc';
 } else $order = 'desc';
